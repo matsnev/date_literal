@@ -1,0 +1,18 @@
+cc_library(
+  name = "date_literal",
+  hdrs = ["date_literal.h"],
+  srcs = [],
+  copts = ["--std=c++20"],
+)
+
+cc_test(
+    name = "date_literal_test",
+    size = "small",
+    srcs = ["date_literal_test.cc"],
+    deps = [
+        ":date_literal",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+    copts = ["--std=c++20"],
+)
